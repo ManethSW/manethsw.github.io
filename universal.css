@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root {
+    --maincolor1: rgba(43, 167, 104, 1);
+    --maincolor2:#2ba76833;
+}
+
+body {
+    background-image: url(Images/leaf-bg.svg);
+}
+
+h1 {
+    text-align: center;
+    /* margin-top: 50px; */
+    color: var(--maincolor1);
+}
+
+/* STYLING OF THE NAV BAR */
+nav::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+header{
+    padding-right: 200px;
+    height: auto;
+}
+
+.logo,nav {
+    padding-top: 50px;
+}
+
+.logo {
+    float: left;
+    color: #2ba768;
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 70px;
+    padding-left: 200px;
+}
+
+nav ul{
+    float: right;
+    list-style: none;
+    margin-right: 0px;
+    position: relative;
+}
+
+nav li {
+    float: left;
+    display: inline;
+    text-decoration: none;
+    margin: 0 5px;
+    margin-left: 30px;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+    line-height: 70px;
+    padding: 5px 10px;
+    font-size: 20px;
+    transition: all 0.3s ease 0s;
+}
+
+nav a:hover{
+    color: rgba(43, 167, 104, 1);   
+}
+
+.dropdown-link {
+    position: absolute;
+    top: 70px;
+    border-top: 3px solid rgba(43, 167, 104, 1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.dropdown:hover > ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-link li {
+    position: relative;
+    margin: 0px;
+    width: 120px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0,0,0,0,.3);
+}
+
+.dropdown-link a {
+    line-height: 50px;
+}
+
+.show,.icon, input {
+    display: none;
+}
+
+@media all and (max-width: 1803px) {
+    header {
+        padding-right: 150px;
+        height: auto;
+        background: #fff;
+    }
+    
+    .logo {
+        padding-left: 150px;
+        font-size: 50px;
+    }
+
+    nav li {
+        margin-left: 10px;
+    }
+}
+
+@media all and (max-width: 1514px) {
+    header {
+        padding: 0;
+    }
+
+    .logo{
+        padding-left: 50px;
+        width: 100%;
+    }
+
+    nav {
+        text-align: right;
+        padding-right: 50px;
+    }
+
+    nav ul {
+        float: right;
+        margin-top: 20px;
+    }
+
+    nav li, .dropdown-link li {
+        display: block;
+        width: 100%;
+    }
+
+    .dropdown-link {
+        top: 70px;
+        position: static;
+        border-top: none;
+        float: none;
+        display: none;
+        
+    }
+
+    .show {
+        display: block;
+        font-size: 20px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+
+    .show:hover {
+        color: #8EC351;
+    }
+
+    .icon {
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        right: 50px;
+        line-height: 75px;
+        cursor: pointer;
+    }
+
+    .show + a, nav ul {
+        display: none;
+    }
+
+    [id^=btn]:checked + ul {
+        display: block;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .logo{
+        font-size: 40px;
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    .icon {
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        right: 10px;
+        line-height: 75px;
+        cursor: pointer;
+    }
+}
+
+/* SYLING OF THE FOOTER*/
+footer {
+    margin-top: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.footernav {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    width: fit-content;
+    margin-left: 50px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    line-height: 30px;
+    transition: all 0.3s ease 0s;
+}
+
+.navgrid {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    width: fit-content;
+    column-gap: 50px;
+    padding: 0px 30px;
+}
+
+footer a:hover{
+    color: rgba(43, 167, 104, 1);   
+}
+
+footer h2 {
+    color: var(--maincolor1);
+    text-align: center;
+}
+
+@media all and (max-width: 1000px) {
+    .navgrid {
+        grid-template-columns: none;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .footernav {
+        margin-left: 0px;
+    }
+
+    footer h2 {
+        text-align: left;
+        font-size: 18px;
+    }
+
+    footer a {
+        font-size: 15px;
+    }
+    
+}
