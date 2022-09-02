@@ -144,7 +144,8 @@ h1 {
 	display: grid;
 	grid-template-columns: repeat(2, auto);
 	align-items: center!important;
-	justify-content: center;
+	justify-content: left;
+	margin-bottom: 0px;
 }
 
 .symbol-of-quality img {
@@ -158,25 +159,30 @@ h1 {
 }
 
 .symbol-of-quality p {
-	margin-top: 20px;
+	margin: 20px 0px;
+}
+
+.symbol-of-quality-content div {
+	background: var(--maincolor2);
+	border-radius: 10px;
+	padding: 5px;
 }
 
 .symbol-of-quality h3 {
 	font-size: 20px;
 	text-align: center;
-	margin: 20px 0px;
+	margin: 10px 10px;
 	width: fit-content;
 }
 
 .symbol-of-quality ol {
 	border-radius: 10px;
-	background: var(--maincolor2);
-	padding: 20px;
+	/* padding: 20px; */
 	margin: 5px;
 }
 
 .symbol-of-quality li {
-	margin-left: 20px;
+	margin-left: 30px;
 }
 
 h3 span {
@@ -213,7 +219,7 @@ h3 span {
 	}
 }
 
-@media all and (min-width: 431px) {
+@media all and (min-width: 463px) {
 	/*STYLING FOR THE NUMBERED LIST SECTION*/
 	h3 span {
 		background-image: none;
@@ -390,40 +396,30 @@ h3 span {
 	.symbol-of-quality {
 		grid-template-columns: 1200px;
 	}
-	
+
+	.symbol-of-quality-heading {
+		margin-bottom: 25px;
+	}
 	.symbol-of-quality h2 {
 		font-size: 40px;
 	}
 
 	.symbol-of-quality h3 {
-		margin: 0px 0px;
+		margin: 10px 10px;
 		font-size: 25px;
 	}
 
 	.symbol-of-quality-content {
 		display: grid;
 		grid-template-columns: 520px 680px;
-		grid-template-rows: repeat(2, auto);
-		column-gap: 10px;
+		grid-template-rows: 1fr;
+		column-gap: 15px;
 	}
 
 	.symbol-of-quality-content p {
-		margin-top: 0px;
+		margin-top: 10px;
 		align-self: center;
-		grid-column: 1;
-		grid-row: 2;
 	}
-
-	.symbol-of-quality-content h3 {
-		grid-column: 2;
-		grid-row: 1;
-	}
-
-	.symbol-of-quality-content ol {
-		grid-column: 2;
-		grid-row: 2;
-	}
-	
 }
 
 @media all and (min-width: 1440px) {
