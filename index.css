@@ -1,6 +1,5 @@
 :root {
-    --logocolor: rgba(255, 255, 255, 0.7);
-    --tablerowcolor: rgba(43, 167, 104, 0.1);
+    --logocolor: rgba(255, 255, 255, 0.8);
 }
 
 /* STYLING OF MAIN HEADING */
@@ -11,6 +10,7 @@ h1 {
 #leaf {
 	width: 40px;
 }
+
 .container1 h2 {
     font-size: 30px;
 }
@@ -32,9 +32,9 @@ h1 {
 }
 
 .wrapper-grid1 p {
-    text-align: left;
-    margin: -85px 10px 10px 10px;
+    margin-top: -85px;
     font-size: 15px;
+	padding: 0px 20px 20px 20px;
 	text-align: justify;
 }
 
@@ -206,9 +206,11 @@ table, th, td {
 		color: #FFFFFF;
     }
 
-	#secondary-heading1 {
+	#secondary-heading1,
+	#secondary-heading2,
+	#secondary-heading3 {
 		border-top-left-radius: 0px;
-		border-top-right-radius: 0px;
+    	border-top-right-radius: 0px;
 	}
 
 	#secondary-heading1,
@@ -253,7 +255,6 @@ table, th, td {
     }
 
     .wrapper-grid1 p {
-        text-align: left;
         margin: 10px;
         font-size: 20px;
     }
@@ -290,16 +291,11 @@ table, th, td {
 
 @media screen and (min-width:1200px) {
 	.wrapper-grid1 {
-        grid-template-columns: 95%;
+        grid-template-columns: repeat(2, auto);
+		grid-template-rows: repeat(2, auto);
 		justify-items: center;
-		width: 100%;
-    }
-
-	.plantations-1-2 {
-		grid-template-rows: 1fr;
-		grid-template-columns: repeat(2, auto);
 		grid-gap: 50px;
-	}
+    }
 
 	.container2 {
 		width: 550px;
