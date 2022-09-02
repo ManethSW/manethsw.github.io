@@ -1,447 +1,321 @@
-p {
-	font-size: 15px;
-	line-height: 1.3;
-	border-radius: 10px;
-	background: var(--maincolor2);
-	padding: 15px;
-	margin: 5px;
-	text-align: justify;
+:root {
+    --logocolor: rgba(255, 255, 255, 0.7);
+    --tablerowcolor: rgba(43, 167, 104, 0.1);
 }
 
-/*STYLING THE INTRO WITH IMAGE AND PARA*/
-.intro img {
-	width: 100%;
-	border-radius: 15px;
+/* STYLING OF MAIN HEADING */
+h1 {
+    margin: 100px 0px;
 }
 
 #leaf {
 	width: 40px;
 }
-
-#img1 {
-	display: none;
+.container1 h2 {
+    font-size: 30px;
 }
 
-.intro {
-	display: grid;
-	grid-template-columns: 98%;
-	grid-template-rows: repeat(2, auto);
-	justify-content: center;
-	margin-top: 50px;
-	grid-gap: 15px;
+.tea-plantation-container {
+    display: grid;
+    grid-template-columns: 95%;
+    justify-content: center;
 }
 
-.intro-para div {
-	display: grid;
-	grid-template-rows: repeat(2, auto);
-	grid-gap: 10px;
+/* STYLING OF THE 3 GRIDS */
+.wrapper-grid1 {
+    display: grid;
+    grid-template-columns: 95%;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 50px;
+    justify-content: center;
+    text-align: center;
 }
 
-.intro-para h2 {
-	width: fit-content;
-	border-bottom: 2px solid rgba(43, 167, 104, 0.6);
-	overflow: hidden;
-	margin-bottom: 10px;
-	padding: 5px;
-}
-
-.intro-para p {
-	border-radius: 10px;
-	background: var(--maincolor2);
-	padding: 20px;
-	margin: 5px;
+.wrapper-grid1 p {
+    text-align: left;
+    margin: -85px 10px 10px 10px;
+    font-size: 15px;
 	text-align: justify;
 }
 
-/*STYLING THE TABLE WITH THE UNORDERED LIST*/
-h1 {
-	margin-top: 50px;
-}
-
-.tea-table {
+.plantations-1-2 {
 	display: grid;
-	grid-template-rows: repeat(3, auto);
-	width: 100%;
-	grid-gap: 20px;
-	margin: 25px auto 0px auto;
-	border-radius: 15px;
-	justify-content: center;
+	grid-template-rows: repeat(2, auto);
+	row-gap: 50px;
 }
 
-.list1, .list2, .list3 {
-	background: var(--maincolor2);
-	padding: 20px 0px 20px 40px;
-	margin: 0px 0px 0px 40px;
-	width: 290px;
-	border-radius: 10px;
+.container2 {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    width: 100%;
+    background: var(--maincolor2);
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-.tea-table h2 {
-	margin-bottom: 10px;
-	margin-left: 50px;
-	border-bottom: 2px solid rgba(43, 167, 104, 0.6);
-	width: fit-content;
+.container2 h1 {
+    color: black;
+    font-size: 35px;
+	margin-top: 55px;
 }
 
-.tea-table li {
-	line-height: 1.6;
+.banner-img {
+    width: 100%;
 }
 
-.list2 {
-	margin-right: 20px;
+.container2 iframe {
+    width: 100%;
+    margin-top: 10px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	margin-bottom: -5px;
 }
 
-.list3 {
-	margin-right: 40px;
+.profile-img {
+    position: absolute;
+    background: var(--logocolor);
+    border-radius: 50%;
+    margin-top: -80px;
+    margin-left: -70px;
+	width: 130px;
 }
 
-/*STYLING THE 3 SECTIONS*/
-.sections {
-	display: grid;
-	grid-template-columns: 100%;
-	grid-template-rows: repeat(3, auto);
-	justify-content: center;
-	grid-gap: 25px;
-	margin-top: 50px;
+/*STYLING OF THE TABLE*/
+table {
+    width: 90%;
+    margin: 100px auto 0px auto;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 50px;
+
 }
 
-.sections h2 {
-	text-align: center;
-	margin-top: 10px;
-	border-bottom: 2px solid rgba(43, 167, 104, 0.6);
-	width: fit-content;
+table h2 {
+    font-size: 18px;
 }
 
-.sections img{
-	width: 100%;
-	border-radius: 15px;
+table p {
+    font-size: 15px;
 }
 
-.sections p {
-	border-radius: 10px;
-	background: var(--maincolor2);
-	margin-top: 10px;
-	padding: 10px;
-	text-align: justify;
+table img {
+    width: 150px;
 }
 
-.content {
-	display: grid;
-	justify-items: center;
-	border-radius: 15px;
-	padding: 10px;
+tr {
+    display: flex;
+    flex-direction: column;
 }
 
-/*STYLING FOR THE NUMBERED LIST SECTION*/
-.symbol-of-quality {
-	display: grid;
-	grid-template-columns: 95%;
-	justify-content: center;
-	margin-bottom: 100px;
-	margin-top: 50px;
+.row-1 {
+    display: none;
 }
 
-.symbol-of-quality-heading {
-	display: grid;
-	grid-template-columns: repeat(2, auto);
-	align-items: center!important;
-	justify-content: left;
-	margin-bottom: 0px;
+table, th, td {
+    padding: 10px 0px;
 }
 
-.symbol-of-quality img {
-	width: 150px;
+.tablegrid1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,auto);
 }
 
-.symbol-of-quality h2 {
-	margin-left: 10px;
-	font-size: 25px;
-	color: var(--maincolor1);
+    /*Styling the border of the table*/
+#mobile-headings {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: var(--maincolor2);
+	border: 2px solid var(--maincolor1);
 }
 
-.symbol-of-quality p {
-	margin: 20px 0px;
+#mobile-headings:nth-of-type(1) {
+	border-top: none;
 }
 
-.symbol-of-quality-content div {
-	background: var(--maincolor2);
-	border-radius: 10px;
-	padding: 5px;
+#secondary-heading1,
+#secondary-heading2,
+#secondary-heading3 {
+    border: 2px solid var(--maincolor1);
+    color: #FFFFFF;
+	background: var(--maincolor1);
+	border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
-.symbol-of-quality h3 {
-	font-size: 20px;
-	text-align: center;
-	margin: 10px 10px;
-	width: fit-content;
+
+#secondary-heading1 {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
-.symbol-of-quality ol {
-	border-radius: 10px;
-	/* padding: 20px; */
-	margin: 5px;
+
+@media all and (min-width:500px) {
+    .tablegrid1 {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2,auto);
+        column-gap: 20px;
+    }
+
+    .tablegrid1 div:nth-of-type(3){
+        grid-row: 1;
+        grid-column: 2;
+    }
 }
 
-.symbol-of-quality li {
-	margin-left: 30px;
+@media all and (min-width: 600px) {
+    .wrapper-grid1 {
+        grid-template-columns: 500px;
+    }
+
+	.profile-img {
+		margin-top: -90px;
+		margin-left: -75px;
+		width: 150px;
+	}
+    
 }
 
-h3 span {
-	background-image: linear-gradient(
-		0deg, 
-		transparent .1em, 
-		var(--maincolor1) .29em, 
-		transparent 0px, 
-		transparent 100%
-	);
-}
+@media all and (min-width: 729px) {
+    table h2 {
+        font-size: 20px;
+    }
+    
+    table p {
+        font-size: 18px;
+    }
 
-@media all and (min-width: 430px) {
-	/*STYLING THE 3 SECTIONS*/
-	.sections {
-		grid-template-columns: 420px;
+    table img {
+        width: 200px;
+    }
+
+    tr, .row-1 {
+        display: table-row;
+    }
+    
+    #mobile-headings {
+        display: none;
+    }
+    
+    table, th, td {
+        padding: 10px;
+    }
+
+    .row-1 {
+        background: var(--maincolor1);
+		color: #FFFFFF;
+    }
+
+	#secondary-heading1 {
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
 	}
 
-	.sections img{
-		width: 380px;
-	}
-
-	.section1 div, .section2 div, .section3 div {
-		padding: 20px;
-	}
-
-	/*STYLING FOR THE NUMBERED LIST SECTION*/
-	.symbol-of-quality img {
-		width: 200px;
-	}
-
-	.symbol-of-quality h2 {
-		font-size: 30px;
-	}
-}
-
-@media all and (min-width: 463px) {
-	/*STYLING FOR THE NUMBERED LIST SECTION*/
-	h3 span {
-		background-image: none;
-	}
-
-	.symbol-of-quality h3 {
-		border-bottom: 2px solid var(--headingunderline);
-	}
-}
-
-@media all and (min-width: 640px) {
-	/*STYLING THE INTRO WITH IMAGE AND PARA*/
-	.intro, h1, .sections, .symbol-of-quality {
-		margin-top: 100px;
-	}
-
-	/*STYLING THE TABLE WITH THE UNORDERED LIST*/
-	.tea-table {
-		margin: 50px auto 0px auto;
-	}
-}
-
-@media all and (min-width: 700px) {
-	/*STYLING THE INTRO WITH IMAGE AND PARA*/
-	.intro {
-		grid-template-columns: 90%;
-	}
-
-	#img1 {
-		display: block;
+	#secondary-heading1,
+	#secondary-heading2,
+	#secondary-heading3 {
+    	border: 2px solid var(--maincolor1);
+    	color: black;
+		background: var(--maincolor2);
 	}
 	
-	#img1mobile {
-		display: none;
+
+	.border {
+		border-left: 2px solid var(--maincolor1);
+		border-right: 2px solid var(--maincolor1);
 	}
 
-	.intro-para div {
+    .row-7 {
+        border-bottom: 2px solid var(--maincolor1);
+    }
+
+    .row-1 th:nth-of-type(1),
+    .row-1 th:nth-of-type(2){
+        border-right: 2px solid #FFFFFF;
+    }
+
+    .row-1 th:nth-of-type(1) {
+        border-top-left-radius:15px ;
+    }
+
+    .row-1 th:nth-of-type(3) {
+        border-top-right-radius:15px ;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .container1 {
+        margin-right: 30px;
+    }
+
+	.wrapper-grid1 {
+        grid-template-columns: 550px;
+    }
+
+    .wrapper-grid1 p {
+        text-align: left;
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    .container2 h1 {
+        margin-top: 75px;
+        margin-bottom: 10px;
+        color: black;
+        font-size: 35px;
+    }
+
+	.profile-img {
+		margin-top: -110px;
+		margin-left: -95px;
+		width: 180px;
+	}
+
+    .banner-img1 img, iframe {
+        border-radius: 15px;
+    }
+
+    table img {
+        width: 200px;
+    }
+
+    table h2 {
+        font-size: 25px;
+    }
+    
+    table p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+	.wrapper-grid1 {
+        grid-template-columns: 95%;
+		justify-items: center;
+		width: 100%;
+    }
+
+	.plantations-1-2 {
+		grid-template-rows: 1fr;
 		grid-template-columns: repeat(2, auto);
-		grid-template-rows: 1fr;
-		grid-gap: 5px;
-	}
-	
-	.intro-para p {
-		margin: 0px;
-	}
-
-	/*STYLING THE TABLE WITH THE UNORDERED LIST*/
-	h1 {
-		font-size: 40px;
-	}
-
-	.list1, .list2, .list3 {
-		width: 360px;
-	}
-
-	.tea-table h2 {
-		font-size: 30px;
-		margin-left: 70px;
-	}
-
-	.tea-table li {
-		font-size: 20px;
-		line-height: 2;
-	}
-	
-}
-
-@media all and (min-width: 900px) {
-	p {
-		font-size: 20px;
-		line-height: 1.6;
-	}
-
-	h2 {
-		font-size: 35px;
-	}
-
-	/*STYLING THE INTRO WITH IMAGE AND PARA*/
-	.intro-para div {
-		grid-template-columns: repeat(2, auto);
-		grid-template-rows: 1fr;
-		grid-gap: 10px;
-	}
-
-	/*STYLING THE 3 SECTIONS*/
-	.sections {
-		grid-template-columns: 580px;
-	}
-
-	.sections img{
-		width: 540px;
-	}
-
-	/*STYLING FOR THE NUMBERED LIST SECTION*/
-	.symbol-of-quality {
-		grid-template-columns: 850px;
-	}
-
-	.symbol-of-quality img {
-		width: 250px;
-	}
-
-	.symbol-of-quality h2 {
-		font-size: 35px;
-	}
-
-	.symbol-of-quality h3 {
-		font-size: 25px;
-	}
-
-	.symbol-of-quality li {
-		font-size: 20px;
-		line-height: 1.6;
-	}
-}
-
-@media all and (min-width: 1140px) {
-	/*STYLING THE TABLE WITH THE UNORDERED LIST*/
-	.tea-table {
-		grid-template-columns: repeat(3, auto);
-		grid-template-rows: 1fr;
-	}
-
-	.list1, .list2, .list3 {
-		margin: 0px;
-	}
-	
-}
-
-@media all and (min-width: 1300px) {
-	/*STYLING THE INTRO WITH IMAGE AND PARA*/
-	.intro {
-		grid-template-columns: 80%;
-	}
-
-	#leaf {
-		width: 50px;
-	}
-
-	/*STYLING THE TABLE WITH THE UNORDERED LIST*/
-	.tea-table {
 		grid-gap: 50px;
 	}
 
-	.tea-table li {
-		line-height: 2.5;
+	.container2 {
+		width: 550px;
 	}
 
-	/*STYLING THE 3 SECTIONS*/
-	.sections {
-		grid-template-columns: 1250px;
-		grid-template-rows: repeat(2, auto);
-		grid-gap: 50px;
-	}
-
-	.sections p {
-		width: 580px;
-	}
-
-	.sections-1-2 {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 50px;
-	}
-
-	#section3 p {
-		width: 900px;
-	}
-
-	#section2p {
-		width: 620px;
-	}
-
-	.symbol-of-quality {
-		grid-template-columns: 1200px;
-	}
-
-	.symbol-of-quality-heading {
-		margin-bottom: 25px;
-	}
-	.symbol-of-quality h2 {
-		font-size: 40px;
-	}
-
-	.symbol-of-quality h3 {
-		margin: 10px 10px;
-		font-size: 25px;
-	}
-
-	.symbol-of-quality-content {
-		display: grid;
-		grid-template-columns: 520px 680px;
-		grid-template-rows: 1fr;
-		column-gap: 15px;
-	}
-
-	.symbol-of-quality-content p {
-		margin-top: 10px;
-		align-self: center;
-	}
+    table {
+        width: 1100px;
+    }
 }
 
-@media all and (min-width: 1440px) {
-	/*STYLING THE TABLE WITH THE UNORDERED LIST*/
-	.tea-table {
-		grid-gap: 80px;
-	}
-}
-
-@media all and (min-width: 1500px) {
-	/*STYLING THE 3 SECTIONS*/
-	.sections {
-		grid-template-columns: auto;
+@media screen and (min-width:1500px) {
+	.wrapper-grid1 {
+		grid-gap: 100px;
 	}
 
-	.sections img {
-		width: 600px;
-	}
-	.sections-1-2 {
+	.plantations-1-2 {
 		grid-gap: 100px;
 	}
 }
-
-
