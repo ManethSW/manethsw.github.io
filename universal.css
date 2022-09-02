@@ -8,6 +8,7 @@
 :root {
     --maincolor1: rgba(43, 167, 104, 1);
     --maincolor2:#2ba76833;
+    --headingunderline: rgba(43, 167, 104, 0.6);
 }
 
 body {
