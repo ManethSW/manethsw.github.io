@@ -15,6 +15,32 @@ body {
     background-image: url(Images/leaf-bg.svg);
 }
 
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 100vw;
+    margin-block: .5em;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(43, 167, 104, 0.8);
+    border: 2px solid #FFF;
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(43, 167, 104, 1);
+}
+
+@supports (scrollbar-color: red blue) {
+    * {
+        scrollbar-color: rgba(43, 167, 104, 0.8) var(--maincolor2);
+    }
+}
+
 
 @media all and (min-width: 1200px) {
     p {
