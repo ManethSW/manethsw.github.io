@@ -78,186 +78,100 @@ h1 {
 }
 
 /* STYLING OF THE NAV BAR */
-nav::after {
-    content: '';
-    clear: both;
-    display: table;
+header {
+    background: var(--maincolor1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(43, 167, 104, 1);
 }
 
-header{
-    padding-right: 200px;
-    height: auto;
-}
-
-.logo,nav {
-    padding-top: 50px;
-}
-
-.logo {
-    float: left;
-    color: #2ba768;
-    font-size: 55px;
-    font-weight: 800;
-    line-height: 70px;
-    padding-left: 200px;
-}
-
-nav ul{
-    float: right;
-    list-style: none;
-    margin-right: 0px;
-    position: relative;
-}
-
-nav li {
-    float: left;
-    display: inline;
-    text-decoration: none;
-    margin: 0 5px;
-    margin-left: 30px;
-}
-
-nav a{
-    color: black;
-    text-decoration: none;
-    line-height: 70px;
-    padding: 5px 10px;
-    font-size: 20px;
-    transition: all 0.3s ease 0s;
-}
-
-nav a:hover{
-    color: rgba(43, 167, 104, 1);   
-}
-
-.dropdown-link {
-    position: absolute;
-    top: 70px;
-    border-top: 3px solid rgba(43, 167, 104, 1);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease 0s;
-}
-
-.dropdown:hover > ul {
-    opacity: 1;
-    visibility: visible;
-}
-
-.dropdown-link li {
-    position: relative;
-    margin: 0px;
-    width: 120px;
-    float: none;
-    display: list-item;
-    border-bottom: 1px solid rgba(0,0,0,0,.3);
-}
-
-.dropdown-link a {
-    line-height: 50px;
-}
-
-.show,.icon, input {
+#menu-button {
     display: none;
 }
 
-@media all and (max-width: 1803px) {
-    header {
-        padding-right: 150px;
-        height: auto;
-        background: #fff;
-    }
-    
-    .logo {
-        padding-left: 150px;
-        font-size: 50px;
-    }
+.main-nav-bar {
+    list-style: none;
+}
 
-    nav li {
+.main-nav-bar {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-nav-bar li {
+    background: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+    border: 2px solid #FFFFFF;
+}
+
+.main-nav-bar a {
+    text-decoration: none;
+    font-size: 22px;
+    color: var(--maincolor1);
+    transition: all 0.3s ease;
+}
+
+.main-nav-bar li:hover {
+    background: var(--maincolor1);
+    border: 2px solid #FFFFFF;
+}
+
+.main-nav-bar li:hover > a {
+    color: black;
+}
+
+nav ul li .active, nav a:hover{
+    background: var(--second-color);
+    color: var(--dark-text-color);
+}
+
+.icon, input {
+    display: none;
+}
+
+@media screen and (max-width:1745px) {
+    .main-nav-bar li {
+        padding: 10px;
         margin-left: 10px;
     }
 }
 
-@media all and (max-width: 1514px) {
-    header {
-        padding: 0;
-    }
-
-    .logo{
-        padding-left: 50px;
-        width: 100%;
-    }
-
-    nav {
-        text-align: right;
-        padding-right: 50px;
-    }
-
-    nav ul {
-        float: right;
-        margin-top: 20px;
-    }
-
-    nav li, .dropdown-link li {
-        display: block;
-        width: 100%;
-    }
-
-    .dropdown-link {
-        top: 70px;
-        position: static;
-        border-top: none;
-        float: none;
-        display: none;
-        
-    }
-
-    .show {
-        display: block;
-        font-size: 20px;
-        padding: 0 20px;
-        line-height: 70px;
-        cursor: pointer;
-        transition: all 0.3s ease 0s;
-    }
-
-    .show:hover {
-        color: #8EC351;
-    }
-
-    .icon {
-        display: block;
-        position: absolute;
-        font-size: 30px;
-        right: 50px;
-        line-height: 75px;
-        cursor: pointer;
-    }
-
-    .show + a, nav ul {
-        display: none;
-    }
-
-    [id^=btn]:checked + ul {
-        display: block;
-    }
+@media screen and (max-width:1605px) {
+    .main-nav-bar li {
+        padding: 5px;
+        margin-left: 5px;
+    } 
 }
 
-@media all and (max-width: 500px) {
-    .logo{
-        font-size: 40px;
-        padding-left: 0px;
-        width: 100%;
+@media screen and (max-width:1500px) {
+    header {
+        display: block;
+        padding: 20px 100px;
     }
 
-    .icon {
+    .main-nav-bar {
+        display: none;
+    }
+
+    .nav-toggle-label {
         display: block;
         position: absolute;
-        font-size: 30px;
-        right: 10px;
-        line-height: 75px;
+        font-size: 35px;
+        right: 50px;
+        top: 20px;
+        margin-top: 35px;
         cursor: pointer;
     }
+
+    nav:checked ~ .main-nav-bar {
+        display: block;
+    }
+    
 }
 
 /* SYLING OF THE FOOTER*/
