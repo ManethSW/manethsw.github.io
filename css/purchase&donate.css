@@ -157,6 +157,11 @@ body h1 {
     background: var(--headingunderline);
 }
 
+#leaf:hover {
+    border: none;
+    background: none;
+}
+
 .wrappergrid2 {
     display: grid;
     grid-template-columns: 95%;
@@ -195,13 +200,11 @@ body h1 {
 #donate-image-1{
     padding: 20px;
     width: 70%;
-    /* border: 2px solid #FFFFFF; */
 }
 
 #donate-image-2 {
     width: 100%;
     margin-top: 25px;
-    /* border: 2px solid #FFFFFF; */
 }
 
 .wrappergrid2 img:hover {

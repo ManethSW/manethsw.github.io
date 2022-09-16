@@ -65,6 +65,7 @@ h1 {
 	}
 }
 
+/*STYLING OF THE MAIN IMAGE BULLET POINT FOR PARAGRAPHS*/
 #leaf {
 	width: 40px;
 }
@@ -107,6 +108,7 @@ nav {
     transition: all 0.3s ease 0s;
 }
 
+a#active, 
 .main-nav-bar a:hover {
     background: #FFFFFF;
     color: var(--maincolor1);
