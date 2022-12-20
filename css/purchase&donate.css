@@ -318,3 +318,554 @@ body h1 {
     }
 }
 
+form {
+    display: grid;
+    row-gap: 40px;
+    width: fit-content;
+    margin: 0px auto 50px auto;
+    padding: 0px;
+    margin-top: 100px;
+}
+
+.details-money {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 40px;
+}
+
+/* Common styling */
+
+.money-div,
+.select-money-3,
+.personal-details-section,
+.card-details-section {
+    background-color: var(--maincolor2);
+    border: 2px solid var(--maincolor1);
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.input-details,
+.input-money,
+.card {
+    display: grid;
+    row-gap: 10px;
+}
+
+.input-details h2,
+.input-money h2,
+.card h2 {
+    font-size: 30px;
+    color: var(--maincolor1);
+}
+
+/* Styling of the detail input section */
+
+.input-details {
+    width: fit-content;
+}
+
+.personal-details-section {
+    display: grid;
+    row-gap: 20px;
+    background-color: var(--maincolor2);
+}
+
+.personal-details {
+    display: grid;
+    row-gap: 5px;
+}
+
+.personal-details h3 {
+    font-size: 25px;
+}
+
+.personal-details-input,
+.card-details-input {
+    position: relative;
+}
+
+.personal-details-input i {
+    position: absolute;
+    font-size: 20px;
+    top: 12px;
+    left: 15px;
+    color: var(--maincolor1);
+    transition: 0.3s ease 0s all;
+}
+
+.personal-details-input input,
+.card-details-input input {
+    height: 45px;
+    width: 400px;
+    padding-left: 40px;
+    border: 2px solid #36454f;
+    border-radius: 25px;
+    color: #36454f;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.3s ease 0s all;
+}
+
+.common-details-input:hover i,
+.common-details-input:focus-within i,
+.common-details-input:focus-visible i {
+    color: #FFFFFF;
+}
+
+.personal-details-input i:hover {
+    color: var(--maincolor1);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.common-details-input input:focus,
+.common-details-input input:hover {
+    border: 3px solid #36454f;
+    background-color: rgba(43, 167, 104, 0.8);
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset;
+    -webkit-text-fill-color: #36454f;
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px rgba(43, 167, 104, 0.8) inset;
+}
+
+input:-webkit-autofill:focus .common-details-input:hover i,
+.common-details-input:focus-within i,
+.common-details-input:focus-visible i {
+    color: #FFFFFF;
+}
+
+.validation-display {
+    color: red;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.validation-display i {
+    color: var(--maincolor1);
+    padding-left: 5px;
+    color: #09c372;
+}
+
+.success {
+    border: 2px solid #09c372 !important;
+}
+
+.error {
+    border: 2px solid red !important;
+}
+
+/* Styling of the radio button section */
+
+.input-money {
+    height: fit-content;
+}
+
+.input-money h2 {
+    height: fit-content;
+}
+
+.select-money {
+    display: grid;
+    column-gap: 20px;
+    gap: 20px;
+}
+
+.select-money-1-2 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 20px;
+}
+
+.select-money-3 {
+    height: fit-content;
+    justify-self: center;
+}
+
+.money-div {
+    display: grid;
+    row-gap: 10px;
+    border-right: 2px solid var(--maincolor1);
+}
+
+.money-option {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    width: fit-content;
+}
+
+.select-money label {
+    color: black;
+    font-weight: bold;
+    font-size: 22.5px;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    font: inherit;
+    color: currentColor;
+    width: 22.5px;
+    height: 22.5px;
+    border: 0.15em solid rgba(43, 167, 104, 1);
+    border-radius: 50%;
+    transform: translate(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 12.5px;
+    height: 12.5px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em 0 rgba(43, 167, 104, 1);
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="radio"]:hover {
+    outline: max(1px, 0em) solid rgba(43, 167, 104, 1);
+    outline-offset: max(1px);
+}
+
+#border-1 {
+    border-right: 4px solid var(--headingunderline);
+    border-radius: 1000px;
+}
+
+#border-2 {
+    border-top: 4px solid var(--headingunderline);
+    border-radius: 1000px;
+}
+
+/* Styling of the credit card section */
+
+.card {
+    width: fit-content;
+    justify-self: center;
+}
+
+.card-details-section {
+    display: grid;
+    row-gap: 20px;
+}
+
+.card-details-input input {
+    width: 420px;
+    padding-left: 10px;
+}
+
+.card-date-cvv {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 20px;
+}
+
+.card-date-cvv input {
+    width: 200px;
+    text-align: center;
+    padding-left: 0px;
+}
+
+.card-date-cvv div:nth-of-type(1) input {
+    border-radius: 25px 0px 0px 25px;
+}
+
+.card-date-cvv div:nth-of-type(2) input {
+    border-radius: 0px 25px 25px 0px;
+}
+
+.date {
+    display: grid;
+}
+
+.date h2 {
+    color: black;
+    font-size: 25px;
+}
+
+input[type="date" i] {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--maincolor1);
+    padding: 2.5px 5px;
+    background-color: #FFFFFF;
+    border: 2px solid #36454f;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: 0.3s ease 0s all;
+}
+
+input[type="date" i]:focus,
+input[type="date" i]:hover {
+    color: #36454f;
+    background-color: rgba(43, 167, 104, 0.8);
+}
+
+::-webkit-datetime-edit {
+    padding: 0.2em 0.5em;
+}
+
+::-webkit-datetime-edit-text {
+    padding: 0 0.3em;
+}
+
+::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+.card-money {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 40px;
+}
+
+/* Styling of the submit button */
+
+#submit-button {
+    width: 464px;
+    font-weight: 1000;
+    font-size: 30px;
+    color: var(--maincolor1);
+    background-color: #FFFFFF;
+    border: 2px solid var(--maincolor1);
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    justify-self: center;
+}
+
+#submit-button:hover {
+    background-color: var(--maincolor1);
+    color: #FFFFFF;
+    border: 2px solid black;
+}
+
+/* Styling of the thank you pop up */
+
+.thank-you-popup {
+    display: none;
+    opacity: 0;
+    transform: scale(0);
+    position: fixed;
+    width: 360px;
+    height: 148px;
+    top: 50%;
+    left: 50%;
+    margin-top: -74px;
+    margin-left: -180px;
+    z-index: 100;
+    transition: all 0.6s ease 0s;
+}
+
+.thank-you-popup {
+    margin-top: -40px;
+}
+
+.thank-you-popup-content {
+    display: grid;
+    row-gap: 10px;
+    width: fit-content;
+    margin: 0px auto;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.thank-you-popup-content .close-icon {
+    top: 7.5px;
+    right: 75px;
+}
+
+.close-icon {
+    cursor: pointer;
+    position: absolute;
+    color: black;
+    background-color: #FFFFFF;
+    border: none;
+    transition: all 0.3s ease 0s;
+}
+
+.close-icon:hover {
+    color: var(--maincolor1);
+}
+
+.close-icon i {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .input-details h2,
+    .input-money h2,
+    .card h2 {
+        font-size: 25px;
+    }
+
+    .personal-details h3 {
+        font-size: 20px;
+    }
+
+    .personal-details-input input {
+        height: 40px;
+        width: 350px;
+        padding-left: 35px;
+        font-size: 16px;
+    }
+
+    .card-details-input input {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .personal-details-input i {
+        font-size: 16px;
+    }
+
+    .select-money label {
+        font-size: 20px;
+    }
+    
+    input[type="radio"] {
+        width: 20px;
+        height: 20px;
+    }
+    
+    input[type="radio"]::before {
+        width: 10px;
+        height: 10px;
+    }
+
+    .validation-display {
+        font-size: 12.5px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    form {
+        row-gap: 30px;
+    }
+
+    .input-details {
+        justify-self: center;
+    }
+
+    .details-money {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    #border-1 {
+        border-right: none;
+        border-top: 4px solid var(--headingunderline);
+    }
+
+    .select-money-1-2 {
+        justify-items: center;
+    }
+
+    .money-div {
+        width: 173.16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card-details-input input {
+        width: 320px;
+    }
+
+    .card-date-cvv input {
+        width: 150px;
+    }
+
+    #submit-button {
+        width: 364px;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .personal-details-input input {
+        width: 300px;
+        padding-left: 35px;
+        font-size: 16px;
+    }
+
+    .money-div, 
+    .select-money-3, 
+    .personal-details-section, 
+    .card-details-section {
+        padding: 15px;
+    }
+
+    .select-money-1-2 {
+        column-gap: 0px;
+    }
+
+    .select-money label {
+        font-size: 17.5px;
+    }
+
+    .money-div {
+        width: 152.02px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .personal-details-input input,
+    .card-details-input input {
+        width: 280px;
+    }
+
+    .card-date-cvv {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+
+    .card-date-cvv div:nth-of-type(1) input {
+        border-radius: 25px;
+    }
+    
+    .card-date-cvv div:nth-of-type(2) input {
+        border-radius: 25px;
+    }
+    
+    .card-date-cvv input {
+        width: 120px;
+    }
+
+    .input-money {
+        width: fit-content;
+        margin: 0px auto;
+    }
+
+    .select-money-1-2 {
+        grid-template-columns: 1fr;
+        row-gap: 20px ;
+    }
+
+    #submit-button {
+        width: 314px;
+    }
+}
+
+
