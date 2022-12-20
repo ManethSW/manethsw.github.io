@@ -163,10 +163,22 @@ input:-webkit-autofill:focus .personal-details-input:hover i,
     display: grid;
 }
 
-.date h2,
 .gender h2 {
     text-align: center;
     margin-bottom: 5px;
+}
+
+.date {
+    display: grid;
+    row-gap: 5px;
+}
+
+.date h2 {
+    text-align: center;
+}
+
+.date p {
+    text-align: center;
 }
 
 input[type="date" i] {

@@ -45,12 +45,12 @@ function initializing() {
     infantCount = 0;
     totalCount = 0;
     loyaltyPoints = 0;
-    
+
     //getting the object from local storage
     if (localStorage.getItem('favOrder')) {
         favOrder = JSON.parse(localStorage.getItem('favOrder'));
     }
-    
+
     //updating the output
     updateLoyaltyPoints();
     updateFavOutput();
@@ -77,7 +77,10 @@ const fChild = document.getElementById('fChild-input');
 
 // Getting a reference to the dropdown element
 const genderOption = document.getElementById("gender");
+
 const dateOption = document.getElementById("date")
+dateOption.min = new Date().toISOString().split("T")[0];
+
 const durationOption = document.getElementById('duration');
 
 //Getting a reference to the output element
@@ -85,6 +88,7 @@ const nameValidationDisplay = document.getElementById("name-validation-display")
 const phoneValidationDisplay = document.getElementById("phone-validation-display");
 const emailValidationDisplay = document.getElementById("email-validation-display");
 const emailConfirmValidationDisplay = document.getElementById("email-confirm-validation-display");
+const dateValidationDisplay = document.getElementById("date-validation-display")
 
 const slAdultCostOutput = document.getElementById('sl-adult-cost');
 const slChildCostOutput = document.getElementById('sl-child-cost');
@@ -214,7 +218,10 @@ document.getElementById('increment-3').addEventListener('click', updateInput.bin
 
 // Add event listener to the dropdown elements
 durationOption.addEventListener('change', updateCurrentCost);
-dateOption.addEventListener('change', updateOverallOutput);
+dateOption.addEventListener('change', function () {
+    inputValidation();
+    updateOverallOutput();
+});
 genderOption.addEventListener(`change`, updateOverallOutput);
 
 //creating a function to validate each input of personal details
@@ -223,6 +230,7 @@ function inputValidation() {
     const phoneNumber = phoneNumberInput.value;
     const email = emailInput.value;
     const emailConfirm = emailConfirmInput.value;
+    const date = dateOption.value;
 
     const fullNameRegex = /^([a-zA-Z]+\s){1,}[a-zA-Z]+$/;
     const phoneNumberRegex = /^\d{10}$/;
@@ -256,6 +264,12 @@ function inputValidation() {
     } else {
         showError(emailConfirmInput, emailConfirmValidationDisplay, "email addresses do not match");
         summaryEmailDisplay.innerHTML = ``;
+    }
+
+    if (date === "") {
+        showError(dateOption, dateValidationDisplay, "Please select a date");
+    } else {
+        showSuccess(dateOption, dateValidationDisplay);
     }
 }
 
@@ -490,7 +504,7 @@ const thankYouMessageClose = document.getElementById('close-thank-you-popup');
 const backdropThankyou = document.getElementById('backdrop-thankyou');
 
 placeOrderButton.addEventListener('click', function () {
-    if (fullNameInput.classList.contains("success") && phoneNumberInput.classList.contains("success") && emailInput.classList.contains("success") && emailConfirmInput.classList.contains("success")) {
+    if (fullNameInput.classList.contains("success") && phoneNumberInput.classList.contains("success") && emailInput.classList.contains("success") && emailConfirmInput.classList.contains("success") && dateOption.classList.contains("success")) {
         if (localStorage.getItem(`loyaltyPointsLocal`)) {
             localLoyaltyPoints = parseInt(localStorage.getItem(`loyaltyPointsLocal`));
             localLoyaltyPoints += loyaltyPoints;
